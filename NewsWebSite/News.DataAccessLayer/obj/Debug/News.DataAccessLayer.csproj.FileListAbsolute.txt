@@ -1,0 +1,5 @@
+C:\Users\omerfarukdilek\Desktop\NewsWebSite\News.DataAccessLayer\bin\Debug\News.DataAccessLayer.dll
+C:\Users\omerfarukdilek\Desktop\NewsWebSite\News.DataAccessLayer\bin\Debug\News.DataAccessLayer.pdb
+C:\Users\omerfarukdilek\Desktop\NewsWebSite\News.DataAccessLayer\obj\Debug\News.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\omerfarukdilek\Desktop\NewsWebSite\News.DataAccessLayer\obj\Debug\News.DataAccessLayer.dll
+C:\Users\omerfarukdilek\Desktop\NewsWebSite\News.DataAccessLayer\obj\Debug\News.DataAccessLayer.pdb

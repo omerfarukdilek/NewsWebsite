@@ -1,0 +1,18 @@
+﻿@using News.Domain
+@model List<Newscast>
+
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-9" style="border:solid 2px; border-radius:3px 4px; border-color:gray; margin-top:10px; margin-bottom:10px; margin-left:auto; margin-right:auto">
+                <h2>@item.NewsTitle</h2><br />
+                <p>@item.NewsContent.Substring(0, 200) ...</p>
+                <a href="@Url.Action("Detail","Newscast",new {id=item.Id })"><button type="button" class="btn btn-info" style="margin:10px;">Devamını Oku</button></a>
+            </div>
+        }
+
+    </div>
+</div>
+

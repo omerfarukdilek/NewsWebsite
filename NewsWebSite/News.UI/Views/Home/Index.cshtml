@@ -1,0 +1,51 @@
+﻿@using News.Domain
+@model List<Newscast>
+
+@{
+    ViewBag.Title = "Haberler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="background-color:gray;">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="width:auto; height:500px;">
+            <a href="#"><img class="d-block w-100" src="~/Content/ui/img/bg-img/26.jpg" style="padding: 0; max-width: 100%; max-height:500px;"></a>
+        </div>
+        <div class="carousel-item" style="width:auto; height:500px;">
+            <img class="d-block w-100" src="~/Content/ui/img/bg-img/28.jpg" alt="Second slide" style="padding: 0; max-width: 100%;
+max-height:500px;">
+        </div>
+        <div class="carousel-item" style="width:auto; height:500px;">
+            <img class="d-block w-100" src="~/Content/ui/img/bg-img/27.jpg" alt="Third slide" style="padding: 0; max-width: 100%; max-height:500px;">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-9" style="border:solid 2px; border-radius:3px 4px; border-color:gray; margin-top:10px; margin-bottom:10px; margin-left:auto; margin-right:auto">
+                <h2>@item.NewsTitle</h2><br />
+                <p>@item.NewsContent.Substring(0, 200) ...</p>
+                <a href="@Url.Action("Detail","Newscast",new {id=item.Id })"><button type="button" class="btn btn-info" style="margin:10px;">Devamını Oku</button></a>
+            </div>
+        }
+            
+        </div>
+</div>
